@@ -19,10 +19,10 @@ filetype plugin indent on    " required
 
 packadd! matchit
 syntax on
-colorscheme koehler
-highlight Title ctermfg=Green guifg=Green
-highlight Underlined ctermbg=DarkGray ctermfg=Black gui=bold
-highlight CursorLine ctermbg=DarkGreen ctermfg=Black guibg=#000050 guifg=fg
+" colorscheme koehler
+" highlight Title ctermfg=Green guifg=Green
+" highlight Underlined ctermbg=DarkGray ctermfg=Black gui=bold
+" highlight CursorLine ctermbg=DarkGreen ctermfg=Black guibg=#000050 guifg=fg
 set nu
 set showmode
 set cursorline
