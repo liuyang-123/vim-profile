@@ -19,10 +19,10 @@ filetype plugin indent on    " required
 
 packadd! matchit
 syntax on
-" colorscheme koehler
-" highlight Title ctermfg=Green guifg=Green
-" highlight Underlined ctermbg=DarkGray ctermfg=Black gui=bold
-" highlight CursorLine ctermbg=DarkGreen ctermfg=Black guibg=#000050 guifg=fg
+colorscheme koehler
+highlight Title ctermfg=Green guifg=Green
+highlight Underlined ctermbg=DarkGray ctermfg=Black gui=bold
+highlight CursorLine ctermbg=DarkGreen ctermfg=Black guibg=#000050 guifg=fg
 set nu
 set showmode
 set cursorline
@@ -91,7 +91,8 @@ if has("gui_running")
 endif
 
 " Use a vertical bar cursor in Insert mode, block in Normal mode
-if &term =~ 'xterm-256color' || &term =~ 'screen-256color'
+" if &term =~ 'xterm-256color' || &term =~ 'screen-256color'
+if &term =~# 'xterm\|screen\|tmux'
     let &t_SI = "\<Esc>[5 q" " Insert mode: blinking beam
     let &t_SR = "\<Esc>[3 q" " Replace mode: blinking underline
     let &t_EI = "\<Esc>[1 q" " Normal mode: blinking block
