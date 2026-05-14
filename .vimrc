@@ -91,7 +91,6 @@ if has("gui_running")
 endif
 
 " Use a vertical bar cursor in Insert mode, block in Normal mode
-" if &term =~ 'xterm-256color' || &term =~ 'screen-256color'
 if &term =~# 'xterm\|screen\|tmux'
     let &t_SI = "\<Esc>[5 q" " Insert mode: blinking beam
     let &t_SR = "\<Esc>[3 q" " Replace mode: blinking underline
