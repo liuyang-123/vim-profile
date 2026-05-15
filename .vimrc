@@ -72,7 +72,11 @@ inoremap <C-U> <C-G>u<C-U>
 " inoremap <C-space> <C-p>
 " inoremap ,/ </<C-X><C-O>
 
-noremap <Leader><Leader>d "=strftime("%Y-%m-%d %A")<CR>Po
+" VSCodeVim does not evaluate Vimscript expression registers from .vimrc.
+" Keep the date shortcut for native Vim only; configure VS Code in settings.json.
+if !exists('g:vscode')
+  execute 'nnoremap <Leader><Leader>d i<C-R>=strftime(''%Y-%m-%d %A'')<CR><Esc>o'
+endif
 
 noremap gs <Plug>(easymotion-s)
 hi link EasyMotionTarget ErrorMsg
